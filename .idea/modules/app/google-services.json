@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "169610392558",
+    "project_id": "asgkalitekontrol",
+    "storage_bucket": "asgkalitekontrol.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169610392558:android:05231b4214e8c80cdc14ff",
+        "android_client_info": {
+          "package_name": "com.example.asgkalitekontrol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169610392558-0o6u9eeb5s5f6fio2gn7jaa14e58mf4e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.asgkalitekontrol",
+            "certificate_hash": "ac1406f61f921e99df520f1a7ccb442bdb09068c"
+          }
+        },
+        {
+          "client_id": "169610392558-lestovfsqteg06j5obs2gq2lm1sdbcmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Ss_Gf-iCj8wrZ6HWFQxtaLvGX9W4yXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169610392558-lestovfsqteg06j5obs2gq2lm1sdbcmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

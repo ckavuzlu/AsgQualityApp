@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "363102207742",
+    "project_id": "asg-tekstil-kalite-kontrol",
+    "storage_bucket": "asg-tekstil-kalite-kontrol.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363102207742:android:b4f315c8676f86015eefaf",
+        "android_client_info": {
+          "package_name": "com.example.asgkalitekontrol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363102207742-2fevevgu201rqmdm6sgmie1clqj7ucmt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNxpmiIuwoIHkMvnu9mwAAqpNViWmlbXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363102207742-2fevevgu201rqmdm6sgmie1clqj7ucmt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

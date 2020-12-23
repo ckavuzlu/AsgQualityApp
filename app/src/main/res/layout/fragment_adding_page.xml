@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/edt_add_opperator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintVertical_bias="0.1"
+            android:hint="@string/add_operator_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_operator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/add_operator"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@id/edt_add_opperator"
+            app:layout_constraintStart_toStartOf="@id/edt_add_opperator"
+            app:layout_constraintTop_toBottomOf="@id/edt_add_opperator" />
+
+
+        <EditText
+            android:layout_marginTop="16dp"
+            android:id="@+id/edt_add_model_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_model_name"
+            app:layout_constraintEnd_toEndOf="@id/edt_add_opperator"
+            app:layout_constraintStart_toStartOf="@id/edt_add_opperator"
+            app:layout_constraintTop_toBottomOf="@id/btn_add_operator" />
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/edt_add_model_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/add_model_color"
+            app:layout_constraintEnd_toEndOf="@id/edt_add_opperator"
+            app:layout_constraintStart_toStartOf="@id/edt_add_opperator"
+            app:layout_constraintTop_toBottomOf="@id/edt_add_model_name" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/add_model"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@id/edt_add_opperator"
+            app:layout_constraintStart_toStartOf="@id/edt_add_opperator"
+            app:layout_constraintTop_toBottomOf="@id/edt_add_model_color" />
+
+        <EditText
+            android:id="@+id/edt_add_operatation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+            app:layout_constraintEnd_toEndOf="@id/edt_add_opperator"
+            app:layout_constraintStart_toStartOf="@id/edt_add_opperator"
+            app:layout_constraintTop_toBottomOf="@id/btn_add_model"
+            android:hint="@string/add_operatation_name"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_operatation"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/add_operatation"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@id/edt_add_opperator"
+            app:layout_constraintStart_toStartOf="@id/edt_add_opperator"
+            app:layout_constraintTop_toBottomOf="@id/edt_add_operatation" />
+
+        <EditText
+            android:id="@+id/edt_add_personnel_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/edt_add_opperator"
+            app:layout_constraintStart_toStartOf="@id/edt_add_opperator"
+            app:layout_constraintTop_toBottomOf="@id/btn_add_operatation"
+            android:layout_marginTop="16dp"
+            android:hint="@string/add_personnel_name" />
+        <EditText
+            android:id="@+id/edt_add_personel_user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/edt_add_opperator"
+            app:layout_constraintStart_toStartOf="@id/edt_add_opperator"
+            app:layout_constraintTop_toBottomOf="@id/edt_add_personnel_name"
+            android:layout_marginTop="16dp"
+            android:hint="@string/add_personnel_user_name" />
+        <EditText
+            android:layout_marginTop="16dp"
+            android:id="@+id/edt_add_personel_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/edt_add_opperator"
+            app:layout_constraintStart_toStartOf="@id/edt_add_opperator"
+            app:layout_constraintTop_toBottomOf="@id/edt_add_personel_user_name"
+            android:hint="@string/add_personnel_password"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:layout_marginTop="16dp"
+            android:id="@+id/edt_add_personel_password_check"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/edt_add_opperator"
+            app:layout_constraintStart_toStartOf="@id/edt_add_opperator"
+            app:layout_constraintTop_toBottomOf="@id/edt_add_personel_password"
+            android:hint="@string/add_personnel_password_check"
+            android:layout_marginBottom="16dp"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_personel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/add_operatation"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@id/edt_add_opperator"
+            app:layout_constraintStart_toStartOf="@id/edt_add_opperator"
+            app:layout_constraintTop_toBottomOf="@id/edt_add_personel_password_check"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

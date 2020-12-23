@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AsgKaliteKontrol</string>
+    <string name="user_name">Kullancı Adı</string>
+    <string name="password">Şifre</string>
+    <string name="adding_page">Ekleme Sayfası</string>
+    <string name="list_page">Raporlar</string>
+    <string name="log_in">Giriş Yap</string>
+    <string name="profile">Profil</string>
+    <string name="add_operator">Operatör Ekle</string>
+    <string name="add_operator_name">Operatör İsmi</string>
+    <string name="add_model">Model Ekle</string>
+    <string name="add_model_name">Model İsmi</string>
+    <string name="add_model_color">Model Rengi</string>
+    <string name="add_operatation">Operasyon Ekle</string>
+    <string name="add_operatation_name">Operasyon İsmi</string>
+    <string name="add_personnel_user_name">Personel Kullanıcı Adı</string>
+    <string name="add_personnel_name">Personel İsim Soyisim</string>
+    <string name="add_personnel">Personel Ekle</string>
+    <string name="add_personnel_password">Personel Şifresi</string>
+    <string name="add_personnel_password_check">Personel Şifresi Tekrar</string>
+</resources>
