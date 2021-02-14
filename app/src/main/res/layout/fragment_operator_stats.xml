@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_operator_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Can Kavuzlu"
+            android:textColor="@android:color/black"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <AutoCompleteTextView
+            android:id="@+id/txt_model_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:completionThreshold="1"
+            android:hint="Model İsmi Giriniz"
+            android:singleLine="true"
+            android:inputType="text"
+            android:imeActionLabel="Done"
+            android:imeOptions="actionDone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/txt_operator_name" />
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:id="@+id/start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Başlangıç Tarihi : "
+            app:layout_constraintStart_toStartOf="@id/txt_model_name"
+            app:layout_constraintTop_toBottomOf="@id/txt_model_name" />
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:id="@+id/end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Bitiş Tarihi :           "
+            app:layout_constraintEnd_toEndOf="@id/txt_model_name"
+            app:layout_constraintTop_toBottomOf="@id/txt_model_name" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/apply"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@id/txt_model_name"
+            app:layout_constraintStart_toStartOf="@id/txt_model_name"
+            app:layout_constraintTop_toBottomOf="@id/end_date" />
+
+        <TextView
+            android:id="@+id/txt_expected_jobs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Beklenen İş : 5500"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_apply" />
+
+        <TextView
+            android:id="@+id/total_jobs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Toplam İş : 4785 (%87)"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/txt_expected_jobs"
+            app:layout_constraintTop_toBottomOf="@id/txt_expected_jobs" />
+
+        <TextView
+            android:id="@+id/txt_mistakes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Yapılan Hata : 88 (%2)"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/total_jobs"
+            app:layout_constraintTop_toBottomOf="@id/total_jobs" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_profil"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_mistakes" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        app:strokeWidth="2dp"
+        app:strokeColor="@android:color/black"
+        app:cardCornerRadius="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/report_card_constraint"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/txt_operator_name"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_operator_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/txt_operator_name"
+                    android:src="@drawable/ic_baseline_person_24"/>
+
+
+
+                <TextView
+                    android:autoSizeMaxTextSize="24sp"
+                    android:autoSizeMinTextSize="8sp"
+                    android:layout_marginStart="4dp"
+                    android:id="@+id/txt_operator_name"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/img_person"
+                    android:text="Can Kavuzlu" />
+
+                <TextView
+                    android:textStyle="italic"
+                    android:autoSizeMaxTextSize="24sp"
+                    android:autoSizeMinTextSize="8sp"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/txt_model_name"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/txt_operator_name"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/txt_operator_name"
+                    android:text="New Black" />
+
+                <TextView
+                    android:autoSizeMaxTextSize="24sp"
+                    android:autoSizeMinTextSize="8sp"
+                    android:id="@+id/txt_operation"
+                    android:layout_margin="8dp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txt_operator_name"
+                    app:layout_constraintEnd_toStartOf="@id/txt_checked_jobs"
+                    android:text="Kol Takma" />
+
+                <TextView
+                    android:autoSizeMaxTextSize="24sp"
+                    android:autoSizeMinTextSize="8sp"
+                    android:id="@+id/txt_checked_jobs"
+                    android:layout_margin="8dp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Yapılan İş : " />
+
+                <TextView
+                    android:autoSizeMaxTextSize="24sp"
+                    android:autoSizeMinTextSize="8sp"
+                    android:id="@+id/txt_error_jobs"
+                    android:layout_margin="8dp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/txt_checked_jobs"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/txt_checked_jobs"
+                    app:layout_constraintEnd_toEndOf="@id/txt_checked_jobs"
+                    android:text="Hatalı İş : " />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#000"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:autoSizeMaxTextSize="24sp"
+                    android:autoSizeMinTextSize="8sp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/txt_qcPersonnel_name"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Can Kavuzlu" />
+
+                <ImageView
+                    android:layout_marginEnd="8dp"
+                    android:id="@+id/img_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/txt_date"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_date"
+                    app:layout_constraintEnd_toStartOf="@id/txt_date"
+                    android:src="@drawable/ic_baseline_date_range_24"/>
+
+                <TextView
+                    android:autoSizeMaxTextSize="24sp"
+                    android:autoSizeMinTextSize="8sp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/txt_date"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Can Kavuzlu" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

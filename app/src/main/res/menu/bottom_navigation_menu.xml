@@ -3,17 +3,26 @@
 <item
     android:id="@+id/adding_page"
     android:enabled="true"
+    android:orderInCategory="1"
     android:icon="@drawable/ic_baseline_person_add_24"
     android:title="@string/adding_page"/>
 
     <item
-    android:id="@+id/list_page"
-    android:enabled="true"
-    android:icon="@drawable/ic_baseline_format_list_bulleted_24"
-    android:title="@string/list_page"/>
+    android:id="@+id/reportListFragment"
+        android:orderInCategory="2"
+        android:enabled="true"
+    android:icon="@drawable/ic_baseline_report_24"
+    android:title="@string/error_reports"/>
+    <item
+        android:id="@+id/totalReportListFragment"
+        android:orderInCategory="3"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        android:title="@string/total_reports"/>
 
     <item
-        android:id="@+id/profile_page"
+        android:orderInCategory="4"
+        android:id="@+id/profileFragment"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="@string/profile"/>

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.asgkalitekontrol.R
 import com.example.asgkalitekontrol.databinding.FragmentAddingPageBinding
 import com.example.asgkalitekontrol.view.activity.MainActivity
@@ -66,7 +67,10 @@ class AddingPageFragment : Fragment(){
             addingPageBinding.edtAddOperatation.setText("")
         }
         addingPageBinding.btnAddPersonel.setOnClickListener {
-            var personnel = Personnel(name = addingPageBinding.edtAddPersonnelName.text.toString(),username = addingPageBinding.edtAddPersonelUserName.text.toString(),password = addingPageBinding.edtAddPersonelPassword.text.toString())
+            var personnel = Personnel(name = addingPageBinding.edtAddPersonnelName.text.toString(),
+                username = addingPageBinding.edtAddPersonelUserName.text.toString(),
+                password = addingPageBinding.edtAddPersonelPassword.text.toString(),
+                accountType = "QualityControlPersonnel")
             if(personnel.name == "" ){
               addingPageBinding.edtAddPersonnelName.error = "Lütfen Tüm alanları doldurunuz"
             }else if(personnel.username == ""){

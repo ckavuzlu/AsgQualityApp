@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_marginTop="50dp"
+            android:layout_margin="50dp"
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autotext_model_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:completionThreshold="1"
+            android:hint="@string/model_name"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autotext_operatation_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:completionThreshold="1"
+            android:hint="@string/add_operatation_name"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/autotext_model_name" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autotext_operators_name"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:completionThreshold="1"
+            android:hint="@string/add_operator_name"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/autotext_operatation_name" />
+
+        <EditText
+            android:id="@+id/edt_checked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:completionThreshold="1"
+            android:hint="@string/to_do_work"
+            android:inputType="number"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/autotext_operators_name" />
+
+        <EditText
+            android:id="@+id/edt_finished_jobs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:completionThreshold="1"
+            android:hint="@string/done_works"
+            android:inputType="number"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_checked" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/add_total_report"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@id/spinner_hour"
+            app:layout_constraintStart_toStartOf="@id/spinner_hour"
+            app:layout_constraintTop_toBottomOf="@id/spinner_hour" />
+        <Spinner
+            android:layout_margin="16dp"
+            android:id="@+id/spinner_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/edt_finished_jobs"
+            app:layout_constraintStart_toStartOf="@id/edt_finished_jobs"
+            app:layout_constraintEnd_toEndOf="@id/edt_finished_jobs"
+            app:layout_constraintBottom_toTopOf="@id/btn_add_report"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/which_hour"
+            app:layout_constraintTop_toTopOf="@id/spinner_hour"
+            app:layout_constraintBottom_toBottomOf="@id/spinner_hour"
+            app:layout_constraintStart_toStartOf="@id/edt_finished_jobs"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/spinner_hour"
+            app:layout_constraintHorizontal_bias="0.1"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

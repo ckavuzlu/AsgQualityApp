@@ -14,11 +14,87 @@
             app:destination="@id/adding_page"
             app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_reportFragment"
+            app:destination="@id/reportFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/adding_page"
         tools:layout="@layout/fragment_adding_page"
         android:name="com.example.asgkalitekontrol.view.fragment.AddingPageFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_adding_page_to_reportListFragment"
+            app:destination="@id/reportListFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_add_report"
+        android:id="@+id/reportFragment"
+        android:name="com.example.asgkalitekontrol.view.fragment.AddReportFragment"
+        android:label="ReportFragment" >
+        <action
+            android:id="@+id/action_reportFragment_to_addTotalWorkFragment"
+            app:destination="@id/addTotalWorkFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_error_report_list"
+        android:id="@+id/reportListFragment"
+        android:name="com.example.asgkalitekontrol.view.fragment.ErrorReportListFragment"
+        android:label="ReportListFragment" >
+        <action
+            android:id="@+id/action_reportListFragment_to_totalReportListFragment2"
+            app:destination="@id/totalReportListFragment" />
+        <action
+            android:id="@+id/action_reportListFragment_to_operatorStatsFragment"
+            app:destination="@id/operatorStatsFragment" >
+            <argument android:name="operator"/>
+        </action>
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_profile"
+        android:id="@+id/profileFragment"
+        android:name="com.example.asgkalitekontrol.view.fragment.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addTotalWorkFragment"
+        android:name="com.example.asgkalitekontrol.view.fragment.AddTotalWorkFragment"
+        tools:layout="@layout/fragment_add_total_work_report"
+        android:label="AddTotalWorkFragment" >
+        <action
+            android:id="@+id/action_addTotalWorkFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/totalReportListFragment"
+        tools:layout="@layout/fragment_total_report_list"
+        android:name="com.example.asgkalitekontrol.view.fragment.TotalReportListFragment"
+        android:label="TotalReportListFragment" >
+        <action
+            android:id="@+id/action_totalReportListFragment2_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_totalReportListFragment_to_operatorStatsFragment"
+            app:destination="@id/operatorStatsFragment" >
+            <argument android:name="operator"/>
+        </action>
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_operator_stats"
+        android:id="@+id/operatorStatsFragment"
+        android:name="com.example.asgkalitekontrol.view.fragment.OperatorStatsFragment"
+        android:label="OperatorStatsFragment" >
+        <argument
+            android:name="operator"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

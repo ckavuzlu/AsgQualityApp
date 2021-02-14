@@ -1,7 +1,12 @@
 package com.example.asgkalitekontrol.view.model
 
-data class Personnel(
+object PersonnelInstance{
+    var personnelInstance : Personnel? = null
+}
+
+class Personnel(
     var name : String,
     var username : String,
-    var password : String
+    var password : String,
+    var accountType : String
 )

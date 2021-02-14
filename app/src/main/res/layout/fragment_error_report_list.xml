@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="gone"
+            android:id="@+id/filter_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_add_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Filtreleri Seçiniz"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autotext_operators_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:completionThreshold="1"
+                android:hint="@string/add_operator_name"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_add_filter" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autotext_model_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:completionThreshold="1"
+                android:hint="@string/model_name"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/autotext_operators_name" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autotext_operatation_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:completionThreshold="1"
+                android:hint="@string/add_operatation_name"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/autotext_model_name" />
+
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:id="@+id/start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Başlangıç Tarihi : "
+                app:layout_constraintStart_toStartOf="@id/autotext_operatation_name"
+                app:layout_constraintTop_toBottomOf="@id/autotext_operatation_name" />
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:id="@+id/end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Bitiş Tarihi :           "
+                app:layout_constraintEnd_toEndOf="@id/autotext_operatation_name"
+                app:layout_constraintTop_toBottomOf="@id/autotext_operatation_name" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/apply"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/autotext_operatation_name"
+                app:layout_constraintStart_toStartOf="@id/autotext_operatation_name"
+                app:layout_constraintTop_toBottomOf="@id/end_date" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/btn_filter"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_baseline_filter_alt_24"
+            app:layout_constraintBottom_toTopOf="@id/recycler_report_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_reports"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Raporlar"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/btn_filter"
+            app:layout_constraintEnd_toEndOf="@id/btn_filter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_filter"
+            tools:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="3dp"
+            android:background="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@id/recycler_report_list"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_report_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filter_constraint"
+            tools:visibility="gone" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

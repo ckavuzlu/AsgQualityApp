@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AsgKaliteKontrol</string>
+    <string name="app_name">ASG KÜT</string>
     <string name="user_name">Kullancı Adı</string>
     <string name="password">Şifre</string>
     <string name="adding_page">Ekleme Sayfası</string>
@@ -13,9 +13,35 @@
     <string name="add_model_color">Model Rengi</string>
     <string name="add_operatation">Operasyon Ekle</string>
     <string name="add_operatation_name">Operasyon İsmi</string>
-    <string name="add_personnel_user_name">Personel Kullanıcı Adı</string>
-    <string name="add_personnel_name">Personel İsim Soyisim</string>
-    <string name="add_personnel">Personel Ekle</string>
-    <string name="add_personnel_password">Personel Şifresi</string>
-    <string name="add_personnel_password_check">Personel Şifresi Tekrar</string>
+    <string name="add_personnel_user_name">Kalite Kontrol Personeli Kullanıcı Adı</string>
+    <string name="add_personnel_name">Kalite Kontrol Personeli İsim Soyisim</string>
+    <string name="add_personnel">Kalite Kontrol Personeli Ekle</string>
+    <string name="add_personnel_password">Kalite Kontrol Personeli Şifresi</string>
+    <string name="add_personnel_password_check">Kalite Kontrol Personeli Şifresi Tekrar</string>
+    <string name="model_name">Model Adı</string>
+    <string name="number_of_checked_jobs">Kontrol Edilen İş Sayısı</string>
+    <string name="number_of_errors">Hatalı İş Sayısı</string>
+    <string name="add_report">Rapor Ekle</string>
+    <string name="apply">Uygula</string>
+    <string name="sign_out">Çıkış Yap</string>
+    <string name="to_do_work">Yapılması Gereken İş Sayısı</string>
+    <string name="done_works">Yapılan İş Sayısı</string>
+    <string name="add_error_report">Hata Raporu Ekle</string>
+    <string name="add_total_report">Toplam İş Raporu Ekle</string>
+    <string name="error_reports">Hata Raporları</string>
+    <string name="total_reports">Toplam İş Raporları</string>
+    <string name="which_hour">Kaçıncı Saat</string>
+        <string-array name="which_hour">
+            <item>1.Saat</item>
+            <item>2.Saat</item>
+            <item>3.Saat</item>
+            <item>4.Saat</item>
+            <item>5.Saat</item>
+            <item>6.Saat</item>
+            <item>7.Saat</item>
+            <item>8.Saat</item>
+            <item>9.Saat</item>
+            <item>10.Saat</item>
+            <item>Geçmiş Doldurma</item>
+        </string-array>
 </resources>
