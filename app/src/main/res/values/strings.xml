@@ -31,7 +31,8 @@
     <string name="error_reports">Hata Raporları</string>
     <string name="total_reports">Toplam İş Raporları</string>
     <string name="which_hour">Kaçıncı Saat</string>
-        <string-array name="which_hour">
+    <string name="operator_salary">Operatör Maaşı</string>
+    <string-array name="which_hour">
             <item>1.Saat</item>
             <item>2.Saat</item>
             <item>3.Saat</item>

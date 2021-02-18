@@ -54,6 +54,7 @@ class AddingPageFragment : Fragment(){
         //Add Operator
         addingPageBinding.btnAddOperator.setOnClickListener {
             var operatorName = addingPageBinding.edtAddOpperator.text.toString()
+            var operatorSalary : Int = addingPageBinding.edtAddOpperatorSalary.text.toString().toInt()
 
             database.child("operators").child(operatorName).child("name").setValue(operatorName)
             Toast.makeText(context, "$operatorName başarılı bir şekilde eklendi",Toast.LENGTH_SHORT).show()
