@@ -54,7 +54,7 @@ class LoginFragment : Fragment() {
                 findNavController().navigate(action)
             }
             if(it.accountType == "Admin"){
-                val action = LoginFragmentDirections.actionLoginFragmentToAddingFragment()
+                val action = LoginFragmentDirections.actionLoginFragmentToProfileFragment()
                 findNavController().navigate(action)
             }
 

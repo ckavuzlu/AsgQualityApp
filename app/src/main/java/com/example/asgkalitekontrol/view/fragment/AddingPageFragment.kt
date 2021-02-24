@@ -21,6 +21,7 @@ class AddingPageFragment : Fragment(){
     private lateinit var addingPageBinding : FragmentAddingPageBinding
     lateinit var mainAct : MainActivity
     private lateinit var database: DatabaseReference
+    var operatorSalary : Int = 0
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -48,15 +49,21 @@ class AddingPageFragment : Fragment(){
             var modelName = addingPageBinding.edtAddModelName.text.toString()
 
             database.child("models").child(modelName).child("name").setValue(modelName)
+            database.child("models").child(modelName).child("isDone").setValue(false)
             Toast.makeText(context, "$modelName başarılı bir şekilde eklendi",Toast.LENGTH_SHORT).show()
             addingPageBinding.edtAddModelName.setText("")
         }
         //Add Operator
         addingPageBinding.btnAddOperator.setOnClickListener {
             var operatorName = addingPageBinding.edtAddOpperator.text.toString()
-            var operatorSalary : Int = addingPageBinding.edtAddOpperatorSalary.text.toString().toInt()
 
+            if(addingPageBinding.edtAddOpperatorSalary.text.toString() == ""){
+                operatorSalary = 0
+            }else {
+                operatorSalary  = addingPageBinding.edtAddOpperatorSalary.text.toString().toInt()
+            }
             database.child("operators").child(operatorName).child("name").setValue(operatorName)
+            database.child("operators").child(operatorName).child("salary").setValue(operatorSalary)
             Toast.makeText(context, "$operatorName başarılı bir şekilde eklendi",Toast.LENGTH_SHORT).show()
             addingPageBinding.edtAddOpperator.setText("")
         }
@@ -66,6 +73,7 @@ class AddingPageFragment : Fragment(){
             database.child("operatations").child(operatationName).child("name").setValue(operatationName)
             Toast.makeText(context, "$operatationName başarılı bir şekilde eklendi",Toast.LENGTH_SHORT).show()
             addingPageBinding.edtAddOperatation.setText("")
+            addingPageBinding.edtAddOpperatorSalary.setText("")
         }
         addingPageBinding.btnAddPersonel.setOnClickListener {
             var personnel = Personnel(name = addingPageBinding.edtAddPersonnelName.text.toString(),
